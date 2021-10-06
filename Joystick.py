@@ -16,8 +16,8 @@ class Joystick:
 
 try:
   while 1:
-    x = Joystick.getX("127")
-    y = Joystick.getY("127")
+    x = Joystick.getX(127)
+    y = Joystick.getY(127)
     print(str(x)+" , ")
     print(str(y) + "\n")
 except KeyboardInterrupt:
