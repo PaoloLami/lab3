@@ -16,7 +16,7 @@ class Joystick:
     return(self.ylocation)
 
 try:
-  location = Joystick()
+  location = Joystick(0x48)
   while 1:
     x = location.getX()
     y = location.getY()
