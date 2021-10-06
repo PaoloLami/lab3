@@ -1,14 +1,18 @@
 import smbus
 
 class Joystick:
-
+  
   def __init__(self,address):
     self.ADC = PCF8591(bus,address)
     
-  def getX():
-    ADC.read(1)
-    print(str(ADC.write(1))+" , ")
+  def getX(self):
+    self.xlocation=ADC.read(1)
+    return(self.xlocation)
   
-  def getY():
-    ADC.read(2)
-    print(str(ADC.write(2)))
+  def getY(self):
+    self.ylocation=ADC.read(2)
+    return(self.ylocation)
+
+while 1:
+  print(str(xlocation)+" , ")
+  print(str(ylocation))
