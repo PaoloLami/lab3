@@ -14,5 +14,5 @@ class Joystick:
     return(self.ylocation)
 
 while 1:
-  print(str(xlocation)+" , ")
-  print(str(ylocation))
+  print(str(self.xlocation)+" , ")
+  print(str(self.ylocation))
