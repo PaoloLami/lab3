@@ -39,8 +39,7 @@ try:
   while 1:
     x = location.getX()
     y = location.getY()
-    print(str(x)+" , ")
-    print(str(y))
+    print(str(x)+" , "+str(y))
     time.sleep(0.1)
 except KeyboardInterrupt:
   print("Exiting...")
