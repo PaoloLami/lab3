@@ -2,24 +2,23 @@ import smbus
 
 class Joystick:
   
-  def __init__(self,bus,address,xlocation,ylocation):
-    self.ADC = PCF8591(bus,address)
+  def __init__(self,address,xlocation,ylocation):
+    self.ADC = PCF8591(address)
     self.xlocation=xlocation
     self.ylocation=ylocation
     
   def getX(self):
-    self.xlocation=ADC.write(ADC.read(1))
+    self.xlocation=self.ADC.read(1)
     return(self.xlocation)
-  
+
   def getY(self):
-    self.ylocation=ADC.write(ADC.read(2))
+    self.ylocation=self.ADC.read(2)
     return(self.ylocation)
 
 try:
   while 1:
-    x = Joystick.getX()
-    y = Joystick.getY() 
-    print(str(x)+" , ")
-    print(str(y) + "\n")
+    coordinates= Joystick("127","127")
+    print(str(coordinates.xlocation)+" , ")
+    print(str(coordinates.ylocation) + "\n")
 except KeyboardInterrupt:
   print("Exiting...")
