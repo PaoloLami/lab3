@@ -13,6 +13,11 @@ class Joystick:
     self.ylocation=ADC.read(2)
     return(self.ylocation)
 
-while 1:
-  print(str(self.xlocation)+" , ")
-  print(str(self.ylocation))
+try:
+  while 1:
+    x = getX()
+    y = getY() 
+    print(str(x)+" , ")
+    print(str(y) + "\n")
+except KeyboardInterrupt:
+  print("Exiting...")
