@@ -1,5 +1,6 @@
 import smbus
 import PCF8591
+import time
 
 class Joystick:
   
@@ -15,10 +16,12 @@ class Joystick:
     return(self.ylocation)
 
 try:
+  location = Joystick()
   while 1:
-    x = Joystick.getX(127)
-    y = Joystick.getY(127)
+    x = location.getX()
+    y = location.getY()
     print(str(x)+" , ")
     print(str(y) + "\n")
+    time.sleep(100)
 except KeyboardInterrupt:
   print("Exiting...")
