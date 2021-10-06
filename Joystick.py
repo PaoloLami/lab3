@@ -17,7 +17,7 @@ class Joystick:
 
 try:
   while 1:
-    coordinates= Joystick("127","127")
+    coordinates= Joystick("test","127","127")
     print(str(coordinates.xlocation)+" , ")
     print(str(coordinates.ylocation) + "\n")
 except KeyboardInterrupt:
