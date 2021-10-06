@@ -41,6 +41,6 @@ try:
     y = location.getY()
     print(str(x)+" , ")
     print(str(y) + "\n")
-    time.sleep(100)
+    time.sleep(0.1)
 except KeyboardInterrupt:
   print("Exiting...")
